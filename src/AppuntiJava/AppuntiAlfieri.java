@@ -28,6 +28,9 @@ class AppuntiAlfieri {
 		//N.B. le variabili possono essere dichiarate in successione se sono dello stesso tipo in questa maniera: int a, b, c;
 		//N.B. i primi sono tipi di dato primitivo, ossia predefiniti del linguaggio, la variabile String invece è tecnicamente un oggetto costruito infatti inizia con una lettera maiuscola come tutti gli oggetti e le classi
 		
+		//final int COSTANTE_1 = 5; //le costanti sonno dei contenitori di dati che non cambiano, si usa la keyword final per indicare che non cambia e per convenzione il nome si scrive tutto in masiuscolo usando gli underscore tra una parola e l'altra
+
+		
 		//*FINE VARIABILI E DATI*
 		
 		//*OPERATORI LOGICI
@@ -165,7 +168,10 @@ class AppuntiAlfieri {
 		
 		//DICHIARAZIONE DI UN ARRAY
 		//int [] numeri =new int[10] ; questo è uno dei metodi per dichiarare un array che in questo caso sarà di lunghezza massima 10
-		
+		//int [] numeri = {1,2,3,4} ; questo è un altro dei metodi per dichiarare e inizializzaere un array
+        
+        
+        
 		//Esempio
 		System.out.println("l'array è ");
 		int [] arrayEs =new int[10] ;
@@ -173,6 +179,40 @@ class AppuntiAlfieri {
 			arrayEs[i]=r.nextInt(100);
 			System.out.println("il numero che occupa lo spazio "+(i+1)+ " è "+arrayEs[i]);;
 		}
+		
+		//esercizio: Crea una rubrica telefonica permettendo all'utente di inserire i nomi e i numeri di telefono e di ppoterli cercare.
+		
+		final int DIMENSIONE_RUBRICA = 5;
+		String[] nomiRubr = new String [DIMENSIONE_RUBRICA];
+		String[] numeriTel = new String [DIMENSIONE_RUBRICA];
+		int iRub;
+		boolean trovato;
+		String rispostaRicerca, daCercare;
+		
+		for (iRub=0;iRub<nomiRubr.length;iRub++) {
+			System.out.println("inserisci il nome del contatto: ");
+			nomiRubr[iRub]=sc.nextLine();
+			System.out.println("inserisci il numero di "+ nomiRubr[iRub]+":");
+			numeriTel[iRub]=sc.nextLine();
+		}do {
+		System.out.println("quale contatto vuoi cercare?");
+		daCercare=sc.nextLine();
+		trovato= false;
+		for ( iRub = 0; iRub < nomiRubr.length; iRub++) {
+			 if (nomiRubr[iRub].toLowerCase().indexOf(daCercare)>=0||(nomiRubr[iRub].toLowerCase().indexOf(daCercare)>=0 )){ //il metodo index of() restituisce un valore, questo valore è o 1 o -1 utilizziamo questo metodo in questo caso per fare in modo che se nell' array si trova più di un elemento che è composto da ciò che abbiamo cercato,in questo cadso verrà stampato ogni elemento che contiene la ricerca. per questo lo poniamo >= 0.
+            	trovato=true;
+                System.out.println("nome: " + nomiRubr[iRub] + " numero: " + numeriTel[iRub]);
+                }
+            }
+			if(trovato==false){
+				System.out.println("il contatto non è presente in ruburica");			
+			}
+			System.out.println("effettuare una nuova ricerca?");
+			rispostaRicerca=sc.nextLine();
+		}while(rispostaRicerca.equalsIgnoreCase("si")||rispostaRicerca.equalsIgnoreCase("sì"));
+		System.out.println("grazie, arrivederci");
+		
+		
 		
 		//*FINE ARRAY*
 		
