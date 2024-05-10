@@ -194,14 +194,15 @@ class AppuntiAlfieri {
 			nomiRubr[iRub]=sc.nextLine();
 			System.out.println("inserisci il numero di "+ nomiRubr[iRub]+":");
 			numeriTel[iRub]=sc.nextLine();
-		}do {
-		System.out.println("quale contatto vuoi cercare?");
-		daCercare=sc.nextLine();
-		trovato= false;
-		for ( iRub = 0; iRub < nomiRubr.length; iRub++) {
-			 if (nomiRubr[iRub].toLowerCase().indexOf(daCercare)>=0||(nomiRubr[iRub].toLowerCase().indexOf(daCercare)>=0 )){ //il metodo index of() restituisce un valore, questo valore è o 1 o -1 utilizziamo questo metodo in questo caso per fare in modo che se nell' array si trova più di un elemento che è composto da ciò che abbiamo cercato,in questo cadso verrà stampato ogni elemento che contiene la ricerca. per questo lo poniamo >= 0.
-            	trovato=true;
-                System.out.println("nome: " + nomiRubr[iRub] + " numero: " + numeriTel[iRub]);
+		}
+		do {
+			System.out.println("quale contatto vuoi cercare?");
+			daCercare=sc.nextLine();
+			trovato= false;
+			for ( iRub = 0; iRub < nomiRubr.length; iRub++) {
+				if (nomiRubr[iRub].toLowerCase().indexOf(daCercare)>=0||(nomiRubr[iRub].toLowerCase().indexOf(daCercare)>=0 )){ //il metodo index of() restituisce un valore, questo valore è o 1 o -1 utilizziamo questo metodo in questo caso per fare in modo che se nell' array si trova più di un elemento che è composto da ciò che abbiamo cercato,in questo cadso verrà stampato ogni elemento che contiene la ricerca. per questo lo poniamo >= 0.
+					trovato=true;
+					System.out.println("nome: " + nomiRubr[iRub] + " numero: " + numeriTel[iRub]);
                 }
             }
 			if(trovato==false){
