@@ -217,6 +217,32 @@ class AppuntiAlfieri {
 		
 		//*FINE ARRAY*
 		
+		//*MATRICI*
+		
+		/*Matrici o array bidimensionali,
+		 * fin ora abbiamo visto gli array in modo statico ossia con un aidmensione fissa,
+		 * adesso vedremo gli array bidimensionali che sono più comunemente chiamati Matrici.
+		 * 
+		 * Le matrici le utilizziamo per dei dati da scrivere o leggere secondo uno schema di righe e colonne,
+		 * come fossero delle tabelle.
+		 * ad esempio delle griglie di valutazuioni per studenti
+		 * in java li dichiariamo cosj
+		 * 
+		 * int [][] matrice= new int[3][2];
+		 * in questo modo dichiariamo una matrice, con 3 righe e 2 colonne
+		 * 
+		 * Le posizioni vanno d a 0 a n-1
+		 * valgono le stesse funzioni degli array classici
+		 */
+		int [][] matrice= new int[3][2];
+
+		for ( int righ=0;righ<3;righ++) { //scorro righe
+			for( int colonne=0;colonne<3;colonne++) //scorro colonne
+				matrice[righ][colonne]=r.nextInt(100);
+		}
+		
+		
+		
 		
 		
 	}
