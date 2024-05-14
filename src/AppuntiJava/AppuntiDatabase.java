@@ -104,12 +104,78 @@ public class AppuntiDatabase {
 		 * -Inserire il numero di attributi che ci serviranno (tendendo conto dell'attributo id)
 		 * -inserire ogni attributo dichiarando il tipo di dato che metteremo dentro e se necessario la lunghezza(perlopiù per le stringhe)
 		 * -fare attenzione alla creazione della chiave primaria (id) accertandoci di attribuirgli dove sta scritto "indice" il valore "primaria" 
-		 * 		e spuntare il flag "incremento" per far si che non vi siano altri lementi uguali
+		 * 		e spuntare il flag "auto incremento" per far si che non vi siano altri lementi uguali
+		 * 
 		 * 
 		 * una volta creato e inseriti gli attributi ci sarà possiblie inserire e gestire i nostri dati.
 		 * 
+		 * 
+		 * 
+		 * creazione di una chiave esterna:
+		 * 
+		 * Una volta creata una seconda tabella che vorremo collegare alla prima,
+		 * ci accertiamo di inserire come entità, l'id della tabellla che vorremo collegare.
+		 * Successivamente selezioniamo l'entità con l'id della tabella da collegare e clickiamo su "indice"
+		 * poi clickiamo su "vista relazioni" e selezioniamo la colonna, il DB e la tabella da collegare.
+		 * ora si genererà la chhiave esterna e le tabelle saranno collegate.
+		 * 
+		 * Si consiglia per una struttura corretta di creare prima tutte le tabelle con i vari id e relazioni
+		 * e poi inserire gli elementi, altrimenti potrebbe dare errore.
+		 * 
+		 * Si consiglia di partire dalla tabella principale e di collegare quelle più piccole a quellas
+		 * 
+		 * 
 		 */
 		
+		/*
+		 * *DATABASE RELAZIONALI*
+		 * 
+		 * Un database relazionale è una struttura dove la modellazione e l'archiviazione
+		 * dei dati avviene a partire da una tabella.
+		 * La tabella è un matrice bidimensionale che rappresenta un'identità logica.
+		 * Ogni tabella è organizzata in una serie di righe e colonne, ogni singola riga viene detta record 
+		 * e rappresenta un' identità.
+		 * 
+		 * Esempio:
+		 * immaginiamo una tabella che rappresenti il concetto di persona,
+		 * la seconda riga ne rappresenta i dati relativi
+		 * la colonna invcece contene i dati relativi alla specifica proprietà ad esempio il nome, l'età ecc.
+		 * quindi ogni colonna ha una propria intestazione che fa parte della descrizione della tabella (che si chiama schema).
+		 * 
+		 * L'incrocio tra una riga e una colonna è definita cella o campo 
+		 * ed è cio che conterrà il singolo valore e potrà contenerne solo uno.
+		 * 
+		 * 
+		 * All'atto pratico una tabella la vediamo così:
+		 * 
+		 * 					PERSONA
+		 * |ID | Nome    | Cognome  | Età | Computer	|
+		 * |1  |Mario    |  Rossi	|  30 |	asus,Apple	|
+		 * |2  |Giuseppe |  Verdi	|  45 |   Apple	 	|
+		 * 
+		 * Questa è un tabella con 10 celle, in quanto le prime sono di intestaizone.
+		 * 
+		 * Essendo che una delle persone ha due computer, possiamo collegarli tramite le relazioni.
+		 * ossia togliamo dalla tabella la colonna del computer (in quanto ogni cella può contenere un solo valore)
+		 * e colleghiamo una seconda tabella tramite una chiave esterna (foreign key).
+		 * 
+		 * Quindi creiamo una seconda tabella alla quale attribuiamo la chiave primaria della prima tabella come chiave esterna.
+		 * 
+		 * Ad esempio:
+		 * 
+		 *  	   COMPUTER
+		 * |id persona | computer    |
+		 * |	 1	   |	asus	 |
+		 * |	 1	   |	apple	 |
+		 * |	 2	   |	asus	 |
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 
+		 */
 		
 		
 		
