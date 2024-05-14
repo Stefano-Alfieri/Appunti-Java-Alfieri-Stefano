@@ -4,7 +4,8 @@ package AppuntiJava;
 import java.util.Random;
 //importare classe Scanner
 import java.util.Scanner;
-
+//importare arrayList
+import java.util.ArrayList;
 
 class AppuntiAlfieri {
 
@@ -214,6 +215,33 @@ class AppuntiAlfieri {
 		System.out.println("grazie, arrivederci");
 		
 		
+		/*
+		 * OPERAZIONI COMUNI SU ARRAY
+		 * 
+		 * Arrays.  questa è una classe di java che da la possibilità di fare alcune operazioni sugli array.
+		 * 
+		 * Ad esempio:
+		 * 
+		 * Arrays.binarySearch(nomeArray, elemento da cercare); 
+		 * Questo metodo restituisce un valore intero, se lo trova mostra la posizione in cui viene trovato altrimenti mostra -1.
+		 * Quindi conviene salvare il valore ottenuto in una variabile per poterlo salvare.
+		 * 
+		 * Arrays.sort(nomeArray); 
+		 * in questo modo verrà ordinato l'array
+		 * 
+		 * Arrays.sort(nomeArray, Collections.reverseOrder()); 
+		 * In questo modo verrà ordinato in ordine decrescente
+		 * 
+		 * Arrays.toString(nomeArray); 
+		 * In questa maniera verrà restituito l'array sotto forma di stringa. Utile per stampare tutti gli elementi di un array.
+		 * 
+		 * System.out.prinln(Arrays.toString(nomeArray);
+		 * i verranno stampati separati da una virgola
+		 * 
+		 * 
+		 */
+		
+		
 		
 		//*FINE ARRAY*
 		
@@ -241,10 +269,78 @@ class AppuntiAlfieri {
 				matrice[righ][colonne]=r.nextInt(100);
 		}
 		
+		/*
+		 * 	*ARRAY LIST*
+		 * 
+		 * Abbiamo visto sin ora gli array come strutture statiche, quindi a dimensione fissa.
+		 * Gli Array list invece sono dinamici quindi ci è possibile manipolarne la dimensione.
+		 * 
+		 * dichiarazione di un ArrayList:
+		 * 
+		 * ArrayList<Integer> numeri= new ArrayList<Integer>(); 
+		 * Questo è il modo corretto per dichiarare una lista
+		 * 
+		 * ArrayList<Integer> numeri= new ArrayList();
+		 * In questo modo funziona comunque ma è più corretto quello precedente
+		 * 
+		 * List numeri=new ArrayList<Integer>();
+		 * In questo modo funziona comunque ma è più corretto quello precedente 
+		 * 
+		 * E' fondamentale importare il pacchetto di arrayList tramite il comando:
+		 * import java.util.ArrayList;
+		 * 
+		 * All'interno dell'ArrayList si mettono delle classi e non dei dati primitivi.
+		 * 
+		 * Inzialmente non dichiaro la sua lunghezza, 
+		 * successivamente alla sua dichiarazione possiamo aggiungere gli elementi con questo comando:
+		 * nomeArrayList.add(elementoDaAggiungere);
+		 * 
+		 */
+			//Esempio:
+		ArrayList<Integer> arrayListEs= new ArrayList<Integer>();
+		System.out.println("Inserisci un elenco di numeri, inserisci 0 per terminare");
+		int nEsArrList;
+		do{
+			nEsArrList=sc.nextInt();
+			arrayListEs.add(nEsArrList);
+		}while(nEsArrList!=0);
 		
 		
+		/*
+		 * OPERAZIONI SUGLI ARRAY LIST
+		 * 
+		 * Anche qui abbiamo vari metodi come per gli array.
+		 * Ad esempio il:
+		 * 
+		 * nomeArrayList.size()
+		 * Restituisce il nummero di elementi della lista
+		 * 
+		 * nomeArrayList.get(i)
+		 * Restituisce il valore in posizione i
+		 * 
+		 * 
+		 * 
+		 */
 		
-		
+		/*
+		 * *WRAPPER*
+		 *  
+		 * I wrapper, oggetti della classe descritta che ampliano il concetto di dato primitivo, 
+		 * permettendo di fare altre operazioni.
+		 * Il tipo va dichiarato con la lettera maiuscola essendo un oggetto come per la classe Integer.
+		 * 
+		 * Ad esempio:
+		 * 
+		 * Integer m; 
+		 * 
+		 * m=2;
+		 * 
+		 * m=n;
+		 * 
+		 * Posso assegnargli un valore primitivo convertendo il primitivo in un wrapper, è detta opperazione di boxing.
+		 * Esiste anche l'operazione di unboxing ossia convertire da wrapper a primitiva.
+		 * 
+		 */
 	}
 
 }
