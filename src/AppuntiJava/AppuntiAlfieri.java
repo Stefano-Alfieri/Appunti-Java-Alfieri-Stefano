@@ -461,45 +461,47 @@ class AppuntiAlfieri {
 		/*
 		 * *HASHMAP*
 		 * 
-		 * Fa parte delle collezioni, come gli ArrayList e gli Hashset. 
-		 * Sono organizzati con un rapporto chiave valore e non con un numero che ne indica l'indice.
+		 * Fa parte delle collezioni, come gli ArrayList e gli Hashset. Sono organizzati
+		 * con un rapporto chiave valore e non con un numero che ne indica l'indice.
 		 * funziona come fosse un insieme di chiavi primarie associate a ogni casella,
 		 * quindi la chiave dev'essere univoca identifica ongi casella, il valore invece
 		 * può esserer ripetuto.
 		 * 
-		 * DICHIARAZIONE: 
-		 * per la dichiarazione del tipo, si usano sempre le classi e
-		 * non i primitivi:
+		 * DICHIARAZIONE: per la dichiarazione del tipo, si usano sempre le classi e non
+		 * i primitivi:
 		 *
-		 * HashMap<tipo chiave, tipo valore> nome=new HashMapp<tipochiave, tipo valore>();
+		 * HashMap<tipo chiave, tipo valore> nome=new HashMapp<tipochiave, tipo
+		 * valore>();
 		 * 
-		 * es: 
+		 * es:
 		 */
-		  HashMap<String,Double> prodottiMap=new HashMap<String,Double>(); 
-		 // per aggiungere gli elementi si usa il .put e non il .add, quindi
-		  prodottiMap.put("pane",5.50);
-		  
-		 /* per scorrere le chiavi e ottenere i valori, possiamo usare un for each
-		 * quindi: 
+		HashMap<String, Double> prodottiMap = new HashMap<String, Double>();
+		// per aggiungere gli elementi si usa il .put e non il .add, quindi
+		prodottiMap.put("pane", 5.50);
+
+		/*
+		 * per scorrere le chiavi e ottenere i valori, possiamo usare un for each
+		 * quindi:
 		 */
-		  for(String nome:prodottiMap.keySet()) //per ogni chiave
-		  System.out.println(prodottiMap.get(nome)); //mostra il valore relativo a quella chiave
-		  
-		 // la stessa cosa si puo fare per i valori,
-		  //es :
-		  for( Double prezzo:prodottiMap.values()) 
-			  System.out.println(prezzo);
-		  
-		 /* per verificare la presernza di una chiave all'interno della mappa, usiamo il
+		for (String nome : prodottiMap.keySet()) // per ogni chiave
+			System.out.println(prodottiMap.get(nome)); // mostra il valore relativo a quella chiave
+
+		// la stessa cosa si puo fare per i valori,
+		// es :
+		for (Double prezzo : prodottiMap.values())
+			System.out.println(prezzo);
+
+		/*
+		 * per verificare la presernza di una chiave all'interno della mappa, usiamo il
 		 * contains ad esemppio
 		 * 
 		 * if(pprodotti.containsKey("Pane")
 		 * 
-		 *  e poi dichiariamo l'istruzione
+		 * e poi dichiariamo l'istruzione
 		 */
 
-		  //*FINE HASHMAP*
-		  
+		// *FINE HASHMAP*
+
 	}
 
 }
