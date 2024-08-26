@@ -478,7 +478,7 @@ class AppuntiAlfieri {
 		HashMap<String, Double> prodottiMap = new HashMap<String, Double>();
 		// per aggiungere gli elementi si usa il .put e non il .add, quindi
 		prodottiMap.put("pane", 5.50);
-
+ 
 		/*
 		 * per scorrere le chiavi e ottenere i valori, possiamo usare un for each
 		 * quindi:
